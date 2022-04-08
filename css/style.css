@@ -1,0 +1,187 @@
+header{
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.navbar-brand i{
+   color: #35a22c;
+}
+.navbar-brand span{
+    font-size: 30px;
+}
+.navbar-nav .nav-item{
+    margin: 0 10px;
+}
+.navbar-nav .nav-item::after{
+    content: "";
+    width: 0;
+    display: block;
+    height: 5px;
+    /* background-color: green; */
+    border-bottom: 5px solid green;
+    transition: all 0.5s;
+}
+.navbar-nav .nav-item.active::after{
+    width: 100%;
+}
+.navbar-nav .nav-item a{
+    font-weight: bold;
+    color: #ffffff !important;
+    /* !importan - ưu tiên đề bt */
+}
+.navbar-nav .nav-item:hover::after{
+    width: 100%;
+}
+.navbar-nav .nav-item.active a {
+    color: #35a22c !important;
+}
+.navbar-nav .nav-item a:hover{
+    color: #35a22c !important;
+}
+/* Carousel */
+
+.carousel-indicators li{
+    color: #35a22c;
+}
+
+.carousel-item{
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+.carousel-item:nth-child(1){
+    background-image: url("/img/finland.jpg");
+}
+.carousel-item:nth-child(2){
+    background-image: url("/img/mountains.jpg");
+}
+.carousel-item:nth-child(3){
+    background-image: url("/img/mountains-1.jpg");
+}
+.img__thumb{
+    width: 150px;
+    margin: auto;
+}
+.carousel-caption{
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* Phần feature */
+.feature {
+    background: url(/img/3.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.feature__item{
+    background-color: rgb(255 255 255 / 18%);
+    padding: 40px 20px;
+    border: 1px solid rgb(255 255 255 / 27%);
+    border-radius: 15px;
+    color: white;
+    transition: all 0.5s;
+    animation-name:feature_item ;
+    animation-duration: 1s;
+}
+.feature__item i{
+    font-size: 50px;
+    color: #35a22c;
+    margin: 20px 0;
+}
+.feature__item h4{
+    margin: 10px 0;
+    font-weight: 700;
+}
+.feature__item p{
+    font-weight: 500;
+}
+.feature__item:hover{
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
+}
+.overlay{
+    background-color: rgba(0, 0, 0, 0.671);
+    height: 100%;
+    padding: 40px 0;
+}
+.nav-pills .nav-link.active{
+    background-color: #35a22c !important;
+    border: 1px solid #35a22c;
+}
+.nav-pills .nav-link{
+    border: 1px solid rgba(128, 128, 128, 0.623);
+    margin: 0 10px;
+    color: black;
+}
+.card:hover .card-body{
+    border: 1px solid #35a22c;
+    border-top: 1px solid #36a22c00;
+}
+.card:hover .card-body .card-title{
+    color: #35a22c;
+}
+.card-body, .card-title{
+    transition: all 0.5s;
+}
+@keyframes feature_item {
+    from{
+        padding: 10px 0;
+    }
+    to{
+        padding: 40px 20px;
+    }
+}
+.left{
+    background: rgba(255,255,255,.25);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,.18);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 30px 0 rgb(0 0 0 / 30%);
+    padding: 45px 30px;
+}
+.right{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 21px;
+}
+.bg__our{
+    background-image: url(/img/memphis_3.png);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    opacity: .5;
+    padding: 50px 0;
+}
+footer{
+    background-color: black;
+}
+.footer__conten{
+    margin: 0 auto;
+    padding: 30px 0;
+}
+.footer__conten i{
+    color: gray;
+    width: 50px;
+    height: 50px;
+    border: 1px solid gray;
+    border-radius: 25px;
+    line-height: 50px;
+    transition: all 1s;
+}
+.footer__item{
+    width: 20%;
+}
+.footer__end{
+    border-top: 0.5px solid rgba(128, 128, 128, 0.671);
+}
+.footer__end p{
+    padding: 20px 0;
+    color: gray;
+}
+.footer__conten .footer__item:hover i{
+    color: #35a22c;
+    border: 1px solid #35a22c;
+}
